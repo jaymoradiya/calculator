@@ -12,17 +12,26 @@ function solve(val) {
     }
     var currentVal = document.getElementsByClassName("display")[0].innerHTML;
 
-    if (val === "c") {
+    if ((isOperator(currentVal[currentVal.length-1]) || currentVal[currentVal.length-1] == "(" || currentVal[currentVal.length-1] == ")")  && val === currentVal[currentVal.length-1]){
+        return;
+    }
+
+    if (val === "ac") {
         document.getElementsByClassName("display")[0].innerHTML = "";
         return;
     }
+    
+    if (val === "c") {
+        document.getElementsByClassName("display")[0].innerHTML = currentVal.slice(0, currentVal.length-1);
+        return;
+    }
+    
     if (val === "=") {
         if (currentVal.length > 0) {
             isCalculated = true;
             let msg;
             try {
                 msg = calculate(currentVal);
-
             } catch (error) {
                 msg = "Invalid Expression";
             }
@@ -30,7 +39,6 @@ function solve(val) {
         }
         return;
     }
-
     document.getElementsByClassName("display")[0].innerHTML = currentVal + val;
 }
 
@@ -65,10 +73,9 @@ function calculate(exp){
             operators.pop();
         }
         else if(isOperator(c)) {
-            while((numbers.length != 0) && precedence(c)<=precedence(operators[operators.length -1]))
-            {
-                    var output = performCalculation();
-                    numbers.push(output); 
+            while((numbers.length != 0) && precedence(c)<=precedence(operators[operators.length -1])){
+                var output = performCalculation();
+                numbers.push(output); 
             }
             operators.push(c);  
         }
