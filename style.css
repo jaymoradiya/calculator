@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    background-color: #010001;
+}
+
+.wrapper {
+    height: 50%;
+    margin: 2rem auto;
+    background-color: inherit; 
+    word-wrap: break-word;
+    width: 28%;
+}
+
+.display {
+    width: auto;
+    background-color: whitesmoke;
+    height: 85px;
+    display: block;
+    font-size: 2rem;
+    overflow-y: scroll;
+}
+
+.btn {
+    width: 5rem;
+    height: 5rem;
+    margin: 0;
+    box-shadow: #000;
+    color: #000;
+    font-size: 2rem;
+}
+
+.num {
+    background-color: darkblue;
+    color: white;
+}
+
+.clr{
+    background-color: red;
+}
+
+.opt{
+    background-color: white;
+}

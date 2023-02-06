@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="first-row">
+            <span class="display">5*4-(12/4)+6*1</span>
+        </div>
+        <div class="second-row">
+            <button class="one btn num" onclick="solve(1);">1</button>
+            <button class="two btn num" onclick="solve(2);">2</button>
+            <button class="three btn num" onclick="solve(3);">3</button>
+            <button class="plus btn opt" onclick="solve('+');">+</button>
+        </div>
+        <div class="second-row">
+            <button class="one btn num" onclick="solve(1);">1</button>
+            <button class="two btn num" onclick="solve(2);">2</button>
+            <button class="three btn num" onclick="solve(3);">3</button>
+            <button class="plus btn opt" onclick="solve('+');">+</button>
+        </div>
+        <div class="third-row">
+            <button class="four btn num" onclick="solve(4);">4</button>
+            <button class="five btn num " onclick="solve(5);">5</button>
+            <button class="six btn num" onclick="solve(6);">6</button>
+            <button class="minus btn opt" onclick="solve('-');">-</button>
+        </div>
+        <div class="forth-row">
+            <button class="seven btn num" onclick="solve(7);">7</button>
+            <button class="eight btn num" onclick="solve(8);">8</button>
+            <button class="nine btn num" onclick="solve(9);">9</button>
+            <button class="multiply btn opt" onclick="solve('*');">*</button>
+        </div>
+        <div class="fifth-row">
+            <button class="clear btn clr" onclick="solve('c');">C</button>
+            <button class="zero btn num" onclick="solve(0);">0</button>
+            <button class="equal btn opt" onclick="solve('=');">=</button>
+            <button class="divide btn opt" onclick="solve('/');">/</button>
+        </div>
+    </div>
+</body>
+
+</html>
