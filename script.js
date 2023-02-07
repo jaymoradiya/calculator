@@ -1,11 +1,10 @@
 // import './infix';
 
-
 let operators = [];
 let numbers = [];
 var isCalculated = false;
 
-function solve(val) {
+function input(val) {
     if (isCalculated) {
         document.getElementsByClassName("display")[0].innerHTML = "";
         isCalculated = false;
@@ -89,9 +88,7 @@ function calculate(exp){
     return numbers.pop();
 }
 
-
-function precedence(o)
-{
+function precedence(o){
     switch (o){
         case '-':
             return 0;
@@ -104,7 +101,6 @@ function precedence(o)
     }
     return -1;
 }
-
 
 function performCalculation(){
     const a = numbers.pop();
@@ -135,6 +131,3 @@ function isOperator(val) {
 function isNumber(val) {
     return val === "0" || val === "1" || val === "2" || val === "3"  || val === "4" || val === "5" || val === "6" || val === "7" ||val === "8" || val === "9";
 }
-
-
-console.log("answer ==> "+calculate("1+2"));

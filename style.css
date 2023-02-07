@@ -69,7 +69,12 @@ body {
 
 }
 
-.first-row .btn {
+.first.row .btn {
+    background-color: #a4a4a5;
+    color: #000;
+}
+
+.equal {
     background-color: #a7a7a7;
     color: #000;
 }
